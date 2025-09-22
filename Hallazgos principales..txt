@@ -1,0 +1,5 @@
+En relación a los datos no se encontraron nulos con gran relevancia, ni duplicados y mediante la correlación de spearman se decidió excluir datos que no tenían gran relación con la target como: Tenure, Geography, HasCrCard y entre otras, en el notebook se realiza el detalle de estas variables.
+
+Se balanceo la target en el conjunto de entrenamiento con el método SMOTE además de generar dos modelos arbol cart y XGboost el primer modelo resulto con métricas un poco debajo en el recall y roc en comparación con el modelo XGBoost es por ello que decidimos tomar el segundo,pero una virtud del arbol es su visualización en la toma de decisiones por lo que podría ser utilizado en dado caso que el usuario lo necesite.
+
+Respecto a las métricas le dimos mayor importancia a la F1-score y Recall ajustando el modelo de XGBoost de tal manera que le diera mas peso a la clase minoritaria y reduciendo el performance de las métricas de acurrency y roc, debido a que si vemos los accionables es mejor que la empresa pueda tomar medidas preventivas y así retener a personas aunque no tuvieran intensiones de abandonar, a no generar algún accionable y que el cliente abandone. 
